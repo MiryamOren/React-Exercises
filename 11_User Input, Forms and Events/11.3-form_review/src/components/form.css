@@ -1,0 +1,8 @@
+input, textarea, select, button{
+  border-radius: 10px;
+  border: none;
+  padding: 0.7rem 1rem;
+  font-size: 1rem;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  background-color: rgb(224, 222, 220);
+}

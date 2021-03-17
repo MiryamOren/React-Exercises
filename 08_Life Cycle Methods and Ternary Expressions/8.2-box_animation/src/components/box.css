@@ -1,0 +1,11 @@
+.box{
+  background-color: darkmagenta;
+  animation-name: box;
+  animation-duration: 5s;
+  transform: translateX(-150px);
+}
+
+@keyframes box {
+  20%   {transform: translateX(-150px);}
+  100% {transform:translateX(0);}
+}

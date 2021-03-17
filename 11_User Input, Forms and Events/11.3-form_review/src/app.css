@@ -1,0 +1,40 @@
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+#root{
+  background-color: rgb(224, 222, 220);
+}
+
+.form, .review, .submit{
+  background-color: black;
+  max-width: 500px;
+  height: 100vh;
+  margin: auto;
+  padding: 3rem 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  color: #fff;
+  font-size: 1.5rem;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.submit{
+  font-size: 2rem;
+  line-height: 4rem;
+  padding: 3rem 4rem 8rem 4rem;
+  background-color:crimson;
+}
+button{
+  cursor: pointer;
+  background-color:crimson;
+  color: black;
+  font-size: 1.5rem;
+  margin: 0 2rem;
+}
+
+.form button{
+  margin-top: 2rem;
+}

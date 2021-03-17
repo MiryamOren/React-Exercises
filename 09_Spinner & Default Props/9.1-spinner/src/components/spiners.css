@@ -1,0 +1,76 @@
+.circle {
+  border-radius: 50%;
+  position: relative;
+  animation: circle 1s infinite linear;
+}
+.circle1 {
+  border: #778b9b solid 5px;
+  border-left: #2fdfbc solid 5px;
+}
+.circle2 {
+  border: #000 solid 5px;
+  border-right: #2fdfbc solid 5px;
+  border-top: #000 solid 0px;
+}
+@keyframes circle {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.three-dots {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.dot {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+}
+#three-dots1 .dot {
+  background-color: #778b9b;
+}
+#three-dots1 .dot:nth-child(1) {
+  animation: dot1 1s infinite linear;
+}
+#three-dots1 .dot:nth-child(2) {
+  animation: dot1 1s infinite 0.33333333s linear;
+}
+#three-dots1 .dot:nth-child(3) {
+  animation: dot1 1s infinite 0.6666667s linear;
+}
+
+@keyframes dot1 {
+  0% {
+    background-color: #2fdfbc;
+  }
+  60% {
+    background-color: #778b9b;
+  }
+}
+#three-dots2 .dot {
+  background-color: #2fdfbc;
+}
+#three-dots2 .dot:nth-child(1) {
+  animation: dot2 2s infinite linear;
+}
+#three-dots2 .dot:nth-child(2) {
+  animation: dot2 2s infinite 0.5s linear;
+}
+#three-dots2 .dot:nth-child(3) {
+  animation: dot2 2s infinite 0.8s linear;
+}
+
+@keyframes dot2 {
+  0%,
+  50% {
+    transform: translateY(0);
+    /* background-color: chartreuse; */
+  }
+  25% {
+    transform: translateY(-25px);
+  }
+}

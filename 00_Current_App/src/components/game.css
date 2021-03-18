@@ -1,0 +1,41 @@
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+.game{
+  height: 100vh;
+  width: 100vw;
+  background-color: #4AB2E1;
+  display: flex;
+}
+.game-board{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 100%;
+  width: 70%;
+  padding: 2rem;
+}
+.game-board > div{
+  background-color: #5E0A12;
+  width: 100%;
+}
+.game-board .new-game-btn{
+  height: 10%;
+}
+.game-board .dices{
+  height: 70%;
+}
+.game-board .game-btns{
+  height: 10%;
+}
+.players{
+  height: 100%;
+  width: 30%;
+  padding: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}

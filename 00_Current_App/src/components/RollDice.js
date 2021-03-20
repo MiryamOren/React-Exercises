@@ -11,7 +11,8 @@ static defaultProps = {
 } 
 constructor(props){ 
 	super(props) 
-	
+	this.props = props;
+
 	// States 
 	this.state = { 
 	die1 : 'one', 
@@ -32,9 +33,10 @@ roll(){
 	
 	// Start timer of one sec when rolling start 
 	setTimeout(() => { 
-	
-	// Set rolling to false again when time over 
-	this.setState({rolling:false}) 
+		// Pass the roll result to Game
+		this.props.func(this.state.die1, this.state.die2);
+		// Set rolling to false again when time over 
+		this.setState({rolling:false});
 	},1000) 
 } 
 
@@ -51,11 +53,13 @@ render(){
 		<button className={handleBtn} 
 				disabled={this.state.rolling} 
 				onClick={this.roll}> 
-		{this.state.rolling ? 'Rolling' : 'Roll Dice!'} 
+				{this.state.rolling ? 'Rolling' : 'Roll Dice!'} 
 		</button> 
 	</div> 
 	) 
 } 
 } 
+
+
 
 export default RollDice

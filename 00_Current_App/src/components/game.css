@@ -9,6 +9,7 @@
   width: 100vw;
   background-color: #4AB2E1;
   display: flex;
+  position: relative;
 }
 .game-board{
   display: flex;
@@ -21,20 +22,29 @@
 .game-board > div{
   background-color: #5E0A12;
   width: 100%;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
 }
-.game-board .new-game-btn{
-  height: 10%;
+.game-board .turn{
+  /* height: 15%; */
+  color: #fff;
+  background-color: #4AB2E1;
+  font-size: 1.5rem;
 }
 .game-board .dices{
-  height: 70%;
+  height: 60%;
 }
 .game-board .game-btns{
-  height: 10%;
+  height: 15%;
+  background-color: #4AB2E1;
+  justify-content: space-between;
 }
 .players{
   height: 100%;
   width: 30%;
-  padding: 0.5rem;
+  padding: 2rem;
   display: flex;
   flex-direction: column;
   justify-content: space-around;

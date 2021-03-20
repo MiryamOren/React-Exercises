@@ -1,13 +1,12 @@
 /* eslint-disable no-useless-constructor */
 import React from 'react';
 // import './App.css';
-import Game from './components/game.component'
-import RollDice from './components/RollDice'
+import Game from './components/Game'
 class App extends React.Component {
   constructor(props){
     super(props);
     this.state = {
-      winningScore : null,
+      winningScore : 30,
       players: {
         player1 : {
           name : 'Player1',
@@ -26,9 +25,11 @@ class App extends React.Component {
   }
   render() {
     return (
-      <RollDice/>
+      <Game 
+        players={this.state.players} 
+        winningScore={this.state.winningScore}
+      />
     )
   }
 }
-// <Game players={this.state.players}/>
 export default App;

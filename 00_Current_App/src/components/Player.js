@@ -1,9 +1,13 @@
 import React from 'react';
-import './player.css'
+import './Player.css'
   
 const Player = (props) => {
+  let className = 'player';
+  if (props.currentPlayer){
+    className += ' current';
+  }
   return (
-    <div className="player">
+    <div className={className}>
       <div className="player-name">{props.name}</div>
       <div className="player-img"><img src={props.img} alt="player-icon"></img></div>
       <div className="score">Current Score: {props.currentScore}</div>

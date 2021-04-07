@@ -1,70 +1,55 @@
-# Getting Started with Create React App
+**Incomes and Expenses Tracker**
+  - 
+  - layout : https://www.canva.com/design/DAEaZ38Kf54/FvEe9HhDYT-sIlm5y09JMA/view#2
+    -
+  - data management
+    - 
+    - mock api which stores user objects
+    - user object properties are: id, user name, password, array of income objects and array of expense objects
+    - incom/expense object properties are: id, amount, description, category and date
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+  - pages functionality
+    - 
+    - app : router, holds the current user object id
+    - page 1 - login:
+      - if user already exist: get user obj, and return it to app.
+      - else, get user name and password, then post new user obj with this properties.
+    - page 2 - new income / expense 
+      - get income / expense details from user, and update the user's array of income / expense objects
+    - page 3 - history
+      - get user's array of income / expense objects and display it on screen (sort?)
+    - page 4 - analyze
+      - filter data according to user input, and display it in chart
+  - components
+    - 
+    1. pages (4)
+    5. nav bar
+    6. page 2 & 3 - income / expense form
+    7. page 3 - income / expense card
+    8. page 4 - chart
 
-## Available Scripts
+  - Features list 
+    - 
+    - Core features
+      - post new income / expense (page 2)
+      - display incomes & expenses history (page 3) 
+      - at least 1 chart of income / expense by period (page 4)
 
-In the project directory, you can run:
+    - Features you want to implement after your core features
+      - "user account" (page 1)
+      - different charts by user input (page 4)
+      
+    - Features for the future
 
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+  - These are the requirements 
+    - 
+    - [ ] you need to have in your project
+      At least 3 pages with React Router (mandatory)
+    - [ ] At least 8 components (mandatory)
+    - [ ] Needs to be online (netlify or github pages)(mandatory)
+    - [ ] Local storage or Mock API for data persistence. (mandatory)
+    - [ ] Needs to be in Hooks  (mandatory)
+    - [ ] Crud (extremely recommended but optional)
+    - [ ] External API's ( extremely recommended but optional)
+    - [ ] Responsive (extremely recommended but optional. But if it is a mobile first app then it is mandatory )
+    - [ ]External libraries (nice to have but very much optional)

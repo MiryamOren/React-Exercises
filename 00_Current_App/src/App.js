@@ -1,35 +1,41 @@
-/* eslint-disable no-useless-constructor */
-import React from 'react';
-// import './App.css';
-import Game from './components/Game'
-class App extends React.Component {
-  constructor(props){
-    super(props);
-    this.state = {
-      winningScore : 30,
-      players: {
-        player1 : {
-          name : 'Player1',
-          img : 'https://cdn2.iconfinder.com/data/icons/monster-1-1/450/monster_alien_space._2-512.png',
-          currentScore : 0,
-          totalScore : 0,
-        },
-        player2 : {
-          name : 'Player2',
-          img : 'https://cdn2.iconfinder.com/data/icons/monster-1-1/450/monster_alien_space._5-512.png',
-          currentScore : 0,
-          totalScore : 0,
-        },
-      },
-    }
-  }
-  render() {
-    return (
-      <Game 
-        players={this.state.players} 
-        winningScore={this.state.winningScore}
-      />
-    )
-  }
+import React, { useState, useEffect, useRef } from 'react';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link
+} 
+from "react-router-dom";
+import Page1 from './components/pages/Page1'
+import Page2 from './components/pages/Page2'
+const App = () => {
+  return (
+    <Router>
+      <div>
+        <nav>
+          <ul>
+            <li>
+              <Link to="/">Home</Link>
+            </li>
+            <li>
+              <Link to="/Page2">Page2</Link>
+            </li>
+          </ul>
+        </nav>
+
+        {/* A <Switch> looks through its children <Route>s and
+            renders the first one that matches the current URL. */}
+        <Switch>
+          <Route path="/Page2">
+            <Page2 />
+          </Route>
+          <Route path="/">
+            <Page1 />
+          </Route>
+        </Switch>
+      </div>
+    </Router>
+  );
 }
+
 export default App;
